@@ -1,0 +1,186 @@
+/* root varaibles */
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+/* REST */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  background: var(--Off-white);
+  overflow-x: hidden;
+  line-height: 4rem;
+  color: var(--Off-black);
+  padding: 4rem 4rem 1rem 4rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  margin: 0 auto;
+  /* width: 800px;
+  height: 100rem; */
+}
+
+.container .cont-div {
+  width: 100%;
+  padding: 5rem 14rem;
+  background: var(--Off-white);
+  box-shadow: 2px 2px 1rem var(--Light-grey), -2px -2px 1rem var(--Light-grey);
+  border-radius: 0.5rem;
+}
+
+.container .cont-div .box {
+  height: 25rem;
+  padding: 2.5rem;
+  padding-right: 6rem;
+  background: var(--White);
+  border-radius: 0.8rem 0.8rem 4rem 0.8rem;
+  position: relative;
+}
+
+.container .cont-div .box .arrow-box {
+  position: absolute;
+  top: 34%;
+  right: 10%;
+
+  background: var(--Purple);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .cont-div .box .arrow-box img {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.container .cont-div .box .age-box {
+  display: grid;
+  grid-template-columns: repeat(3, 8rem);
+  border-bottom: 1px solid var(--Light-grey);
+  padding-bottom: 2rem;
+}
+
+.container .cont-div .box .age-box p {
+  color: var(--Smokey-grey);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: -1rem;
+}
+.container .cont-div .box .age-box input {
+  font-size: 10px;
+  width: 75%;
+  margin-right: 0.2rem;
+  border: 1px solid var(--Light-grey);
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.3rem;
+  color: black;
+  font-weight: 600;
+}
+
+.container .cont-div .box .age-box input:last-child {
+  margin-right: 0;
+}
+
+.result-box {
+  width: 39%;
+  font-weight: 800;
+  font-size: 3rem;
+  color: var(--Purple);
+  background: -webkit-linear-gradient(var(--Purple), var(--Off-black));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#message {
+  font-family: inherit;
+  font-size: 1.4rem;
+  color: var(--Purple);
+}
+
+.dots,
+.dots2 {
+  display: grid;
+  grid-template-columns: repeat(2, 2rem);
+  gap: 0.3rem;
+  position: relative;
+  left: 50%;
+  top: 12%;
+  z-index: -1;
+}
+
+.dots2 {
+  left: 30%;
+  top: -16%;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: rgba(39, 159, 107, 0.599);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.triangle-left,
+.triangle-right {
+  z-index: -1;
+  position: relative;
+  top: 82%;
+  left: 95%;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-right: 50px solid hsla(0, 100%, 67%, 0.525);
+  border-bottom: 25px solid transparent;
+}
+
+.triangle-right {
+  z-index: -1;
+  top: -50%;
+  left: 21%;
+  border-left: 50px solid hsla(0, 100%, 67%, 0.525);
+}
+.attribution {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--Purple);
+}
